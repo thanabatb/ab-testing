@@ -18,6 +18,19 @@ const starterModules = [
   }
 ];
 
+const prototypeFlows = [
+  {
+    title: "Phone Book Version A",
+    description: "Figma-based mobile phone book mock flow.",
+    href: "/phone-book-va"
+  },
+  {
+    title: "Phone Book Search Flow",
+    description: "Search result list state for phone book.",
+    href: "/phone-book-va/search"
+  }
+];
+
 export default function Home() {
   return (
     <main className="mx-auto flex min-h-screen w-full max-w-5xl flex-col px-4 py-8 sm:px-6 lg:px-10 lg:py-12">
@@ -31,6 +44,12 @@ export default function Home() {
           validate user flows, then swap services with real APIs when ready.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
+          <Link
+            href="/phone-book-va"
+            className="rounded-lg bg-slate-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-slate-800"
+          >
+            Open Phone Book vA
+          </Link>
           <Link
             href="https://nextjs.org/docs"
             className="rounded-lg bg-brand-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-brand-700"
@@ -54,6 +73,23 @@ export default function Home() {
             <p className="mt-4 rounded-md bg-slate-100 px-3 py-2 font-mono text-xs text-slate-700">{module.target}</p>
           </article>
         ))}
+      </section>
+
+      <section className="mt-6 rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-sm">
+        <h2 className="text-lg font-semibold text-slate-900">Available Prototypes</h2>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+          {prototypeFlows.map((flow) => (
+            <Link
+              key={flow.href}
+              href={flow.href}
+              className="rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:bg-slate-100"
+            >
+              <p className="text-sm font-semibold text-slate-900">{flow.title}</p>
+              <p className="mt-1 text-sm text-slate-600">{flow.description}</p>
+              <p className="mt-3 font-mono text-xs text-slate-700">{flow.href}</p>
+            </Link>
+          ))}
+        </div>
       </section>
     </main>
   );
