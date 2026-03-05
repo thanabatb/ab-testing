@@ -56,6 +56,12 @@ export default function Home() {
             Open Phone Book vA
           </Link>
           <Link
+            href="/phone-book-vb"
+            className="rounded-lg bg-slate-700 px-4 py-2 text-sm font-medium text-white transition hover:bg-slate-600"
+          >
+            Open Phone Book vB
+          </Link>
+          <Link
             href="https://nextjs.org/docs"
             className="rounded-lg bg-brand-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-brand-700"
           >
