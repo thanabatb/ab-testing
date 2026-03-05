@@ -28,6 +28,11 @@ const prototypeFlows = [
     title: "Phone Book Search Flow",
     description: "Search result list state for phone book.",
     href: "/phone-book-va/search"
+  },
+  {
+    title: "Phone Book Version B",
+    description: "Alternative phone-book entry experience for A/B testing.",
+    href: "/phone-book-vb"
   }
 ];
 
