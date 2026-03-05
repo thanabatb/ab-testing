@@ -60,6 +60,17 @@ function LatestContactCard({ contact }: { contact: Contact }) {
   );
 }
 
+function FavoriteContactItem({ contact }: { contact: Contact }) {
+  return (
+    <div className="w-[68px] shrink-0" title={contact.name}>
+      <AvatarBubble />
+      <p className="mt-2 text-center text-[11px] font-medium leading-[1.2] text-[#111111] [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:2] overflow-hidden">
+        {contact.name}
+      </p>
+    </div>
+  );
+}
+
 export function PhoneBookVersionAScreen() {
   return (
     <main className="min-h-screen bg-[#e8eaee] sm:py-6">
@@ -105,11 +116,9 @@ export function PhoneBookVersionAScreen() {
         <div className="relative z-10 px-4 pt-[22px] pb-[112px]">
           <section>
             <h2 className="text-[18px] font-bold leading-[1.3] text-[#111111]">รายการโปรด</h2>
-            <div className="mt-4 flex items-center gap-4">
+            <div className="mt-4 flex items-start gap-4">
               {favoriteContacts.map((contact) => (
-                <div key={contact.id} title={contact.name}>
-                  <AvatarBubble />
-                </div>
+                <FavoriteContactItem key={contact.id} contact={contact} />
               ))}
               <button type="button" aria-label="add competency" className="relative size-[60px] shrink-0">
                 <img src={imgEllipse111} alt="" className="size-full" width={60} height={60} />

@@ -5,6 +5,7 @@ import {
   MessageCircleMore,
   ScanLine,
   Signal,
+  SlidersHorizontal,
   UserSearch,
   UsersRound,
   Wifi
@@ -111,10 +112,10 @@ export function PhoneBookVersionBSearchHomeScreen({ selectedCompany, recentConta
             </div>
             <button
               type="button"
-              className="grid size-[24px] place-items-center rounded-full border border-dashed border-[#3190f7] text-[8px] font-bold leading-none text-[#454545]"
+              className="grid size-[32px] place-items-center rounded-full border border-dashed border-[#3190f7] text-[#454545]"
               aria-label="open filter"
             >
-              icon
+              <SlidersHorizontal className="size-4" />
             </button>
           </form>
         </div>

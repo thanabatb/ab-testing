@@ -1,7 +1,6 @@
 import {
   BriefcaseBusiness,
   ChevronLeft,
-  ChevronDown,
   Home,
   Mail,
   MessageCircleMore,
@@ -116,10 +115,7 @@ export function PhoneBookVersionBSearchScreen({ query, selectedCompany, results 
             <div className="relative size-[60px] overflow-hidden rounded-[16px] bg-[#f3a7ad]">
               <img src={selectedCompany.logoSrc} alt={selectedCompany.name} className="size-full object-cover" width={60} height={60} />
             </div>
-            <button type="button" className="flex items-center gap-2" aria-label="choose company">
-              <p className="text-[22px] font-bold leading-[1.3] text-black">{selectedCompany.name}</p>
-              <ChevronDown className="size-5 text-[#4c5564]" />
-            </button>
+            <p className="text-[22px] font-bold leading-[1.3] text-black">{selectedCompany.name}</p>
           </div>
 
           <form action="/phone-book-vb/search/results" method="get" className="mt-4 flex items-center gap-3">
