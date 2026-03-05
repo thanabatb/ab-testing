@@ -29,7 +29,7 @@ export function CompanyDropdown({ companies, defaultCompany }: CompanyDropdownPr
   }, []);
 
   return (
-    <div ref={containerRef} className="relative flex items-center gap-6">
+    <div ref={containerRef} className="relative z-20 flex items-start gap-6">
       <div className="relative size-[60px] overflow-hidden rounded-[16px] bg-[#f3a7ad]">
         <img src={selectedCompany.logoSrc} alt={selectedCompany.name} className="size-full object-cover" width={60} height={60} />
       </div>
@@ -46,7 +46,7 @@ export function CompanyDropdown({ companies, defaultCompany }: CompanyDropdownPr
         </button>
 
         {isOpen ? (
-          <ul className="absolute left-0 z-30 mt-2 w-[220px] rounded-[16px] border border-[#dbe2eb] bg-white p-2 shadow-[0_8px_24px_rgba(49,144,247,0.18)]">
+          <ul className="relative z-30 mt-2 w-[220px] rounded-[16px] border border-[#dbe2eb] bg-white p-2 shadow-[0_8px_24px_rgba(49,144,247,0.18)]">
             {companies.map((company) => (
               <li key={company.id}>
                 <button
