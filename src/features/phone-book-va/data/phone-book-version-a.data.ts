@@ -125,7 +125,10 @@ export const favoriteContacts: Contact[] = [
 
 export const latestContacts: Contact[] = [
   cloneWithId(searchableContacts[3], "latest-1"),
-  cloneWithId(searchableContacts[4], "latest-2")
+  cloneWithId(searchableContacts[4], "latest-2"),
+  cloneWithId(searchableContacts[5], "latest-3"),
+  cloneWithId(searchableContacts[6], "latest-4"),
+  cloneWithId(searchableContacts[7], "latest-5")
 ];
 
 export const defaultSearchQuery = "";
