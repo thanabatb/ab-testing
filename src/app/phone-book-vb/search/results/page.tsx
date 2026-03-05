@@ -1,3 +1,4 @@
+import { PhoneBookScreenTracker } from "@/components/analytics/phone-book-screen-tracker";
 import { PhoneBookVersionBSearchScreen } from "@/features/phone-book-vb";
 import { companyCards, filterVersionBContacts } from "@/features/phone-book-vb/data/phone-book-version-b.data";
 import { redirect } from "next/navigation";
@@ -20,6 +21,19 @@ export default function PhoneBookVersionBSearchResultsPage({ searchParams }: Pho
 
   const results = filterVersionBContacts(query, selectedCompany.name);
 
-  return <PhoneBookVersionBSearchScreen query={query} selectedCompany={selectedCompany} results={results} />;
+  return (
+    <>
+      <PhoneBookScreenTracker
+        version="B"
+        screenName="vb_search_results"
+        markFlowComplete
+        properties={{
+          selected_company: selectedCompany.name,
+          query_length: query.length,
+          results_count: results.length
+        }}
+      />
+      <PhoneBookVersionBSearchScreen query={query} selectedCompany={selectedCompany} results={results} />
+    </>
+  );
 }
-

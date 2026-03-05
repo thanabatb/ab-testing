@@ -20,6 +20,21 @@ npm run dev
 
 Open `http://localhost:3000`.
 
+## PostHog Setup (A/B Benchmark)
+
+1. Copy `.env.example` to `.env.local`
+2. Fill in your PostHog values:
+   - `NEXT_PUBLIC_POSTHOG_KEY`
+   - `NEXT_PUBLIC_POSTHOG_HOST` (for US cloud use `https://us.i.posthog.com`)
+3. Restart `npm run dev`
+
+Tracked events in this prototype:
+
+- `phone_book_flow_start`
+- `phone_book_screen_view`
+- `phone_book_screen_leave` (includes `dwell_ms`)
+- `phone_book_flow_complete` (includes `flow_duration_ms`)
+
 ## Project Structure
 
 ```txt

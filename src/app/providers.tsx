@@ -3,6 +3,8 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactNode, useState } from "react";
 
+import { PostHogInitializer } from "@/lib/analytics/posthog-initializer";
+
 type ProvidersProps = {
   children: ReactNode;
 };
@@ -21,5 +23,10 @@ export function Providers({ children }: ProvidersProps) {
       })
   );
 
-  return <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>;
+  return (
+    <QueryClientProvider client={queryClient}>
+      <PostHogInitializer />
+      {children}
+    </QueryClientProvider>
+  );
 }
