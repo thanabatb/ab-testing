@@ -9,6 +9,7 @@ import {
   UsersRound,
   Wifi
 } from "lucide-react";
+import Link from "next/link";
 import type { ComponentType } from "react";
 
 import { cn } from "@/lib/utils";
@@ -16,8 +17,6 @@ import { cn } from "@/lib/utils";
 import { companyOptions, favoriteContacts, latestContacts, profile, type Contact } from "../data/phone-book-version-a.data";
 import { CompanyDropdown } from "./company-dropdown";
 
-const imgEllipse111 = "https://www.figma.com/api/mcp/asset/36f2e284-47ff-4735-b148-14f7f06fecd8";
-const imgVectorPlus = "https://www.figma.com/api/mcp/asset/efeac761-a449-4bbf-aadc-7ac9906a1f41";
 const imgVectorAvatar = "https://www.figma.com/api/mcp/asset/d3b61b7c-2f17-4473-bf98-9796d45a1e7b";
 
 type NavItem = {
@@ -120,16 +119,13 @@ export function PhoneBookVersionAScreen() {
               {favoriteContacts.map((contact) => (
                 <FavoriteContactItem key={contact.id} contact={contact} />
               ))}
-              <button type="button" aria-label="add competency" className="relative size-[60px] shrink-0">
-                <img src={imgEllipse111} alt="" className="size-full" width={60} height={60} />
-                <img
-                  src={imgVectorPlus}
-                  alt=""
-                  className="absolute left-1/2 top-1/2 size-[32px] -translate-x-1/2 -translate-y-1/2"
-                  width={32}
-                  height={32}
-                />
-              </button>
+              <Link
+                href="/phone-book-va/favorites"
+                aria-label="open more favorites"
+                className="grid size-[60px] shrink-0 place-items-center rounded-full border border-dashed border-[#3190f7] bg-transparent text-[14px] font-semibold text-[#3190f7]"
+              >
+                more
+              </Link>
             </div>
           </section>
 

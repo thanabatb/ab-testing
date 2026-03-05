@@ -120,8 +120,13 @@ const cloneWithId = (contact: Contact, id: string): Contact => ({ ...contact, id
 export const favoriteContacts: Contact[] = [
   cloneWithId(searchableContacts[0], "fav-1"),
   cloneWithId(searchableContacts[1], "fav-2"),
-  cloneWithId(searchableContacts[2], "fav-3")
+  cloneWithId(searchableContacts[2], "fav-3"),
+  cloneWithId(searchableContacts[3], "fav-4")
 ];
+
+export const favoriteListContacts: Contact[] = Array.from({ length: 10 }, (_, index) =>
+  cloneWithId(searchableContacts[index], `fav-list-${index + 1}`)
+);
 
 export const latestContacts: Contact[] = [
   cloneWithId(searchableContacts[3], "latest-1"),
