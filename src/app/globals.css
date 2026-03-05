@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f6faf9;
+  --foreground: #1f2937;
+  --card: #ffffff;
+  --card-foreground: #111827;
+  --border: #d7e3e1;
+  --ring: #3e868c;
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background: radial-gradient(circle at top right, #e4f0ef 0%, #f6faf9 45%, #ffffff 100%);
+  color: var(--foreground);
+  font-family: var(--font-body), "Noto Sans Thai", sans-serif;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), "Space Grotesk", sans-serif;
+}

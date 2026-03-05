@@ -1,0 +1,12 @@
+[
+  {
+    "id": "mock-1",
+    "title": "Example item",
+    "status": "active"
+  },
+  {
+    "id": "mock-2",
+    "title": "Another item",
+    "status": "draft"
+  }
+]
