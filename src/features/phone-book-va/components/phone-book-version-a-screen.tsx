@@ -16,7 +16,6 @@ import { cn } from "@/lib/utils";
 import { companyOptions, favoriteContacts, latestContacts, profile, type Contact } from "../data/phone-book-version-a.data";
 import { CompanyDropdown } from "./company-dropdown";
 
-const imgContactAvatar = "https://www.figma.com/api/mcp/asset/09dced9f-4f53-4c1d-a33f-08ec8a81e416";
 const imgEllipse111 = "https://www.figma.com/api/mcp/asset/36f2e284-47ff-4735-b148-14f7f06fecd8";
 const imgVectorPlus = "https://www.figma.com/api/mcp/asset/efeac761-a449-4bbf-aadc-7ac9906a1f41";
 const imgVectorAvatar = "https://www.figma.com/api/mcp/asset/d3b61b7c-2f17-4473-bf98-9796d45a1e7b";
@@ -79,7 +78,7 @@ export function PhoneBookVersionAScreen() {
             </div>
           </div>
 
-          <CompanyDropdown avatarSrc={imgContactAvatar} companies={companyOptions} defaultCompany={profile.name} />
+          <CompanyDropdown companies={companyOptions} defaultCompany={profile.name} />
 
           <form action="/phone-book-va/search" method="get" className="mt-14 flex items-center gap-3">
             <div className="flex h-[42px] flex-1 items-center justify-between rounded-[8px] bg-[#f4f8fd] px-4">

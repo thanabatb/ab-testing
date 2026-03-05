@@ -1,3 +1,5 @@
+import { phoneBookCompanies } from "../../phone-book/shared/company-mock.data";
+
 export type Contact = {
   id: string;
   employeeId: string;
@@ -7,10 +9,10 @@ export type Contact = {
 };
 
 export const profile = {
-  name: "Teddy bank"
+  name: phoneBookCompanies[0]?.name ?? "Teddy bank"
 };
 
-export const companyOptions = ["Teddy bank", "KTB Capital", "KTB Leasing", "KTB Securities"];
+export const companyOptions = phoneBookCompanies;
 
 const firstNamePool = [
   "สมชาย",

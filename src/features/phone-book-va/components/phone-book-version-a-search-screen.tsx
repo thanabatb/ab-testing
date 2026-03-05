@@ -16,7 +16,6 @@ import { cn } from "@/lib/utils";
 import { companyOptions, profile, type Contact } from "../data/phone-book-version-a.data";
 import { CompanyDropdown } from "./company-dropdown";
 
-const imgProfileAvatar = "https://www.figma.com/api/mcp/asset/39f15d4f-0349-497f-9a8b-21218b600cc4";
 const imgVectorAvatar = "https://www.figma.com/api/mcp/asset/b6f61083-42f2-406c-afce-d6c7d11f9f9a";
 
 type NavItem = {
@@ -83,7 +82,7 @@ export function PhoneBookVersionASearchScreen({ query, resultCount, results }: P
             </div>
           </div>
 
-          <CompanyDropdown avatarSrc={imgProfileAvatar} companies={companyOptions} defaultCompany={profile.name} />
+          <CompanyDropdown companies={companyOptions} defaultCompany={profile.name} />
 
           <form action="/phone-book-va/search" method="get" className="mt-4 flex items-center gap-3">
             <div className="flex h-[42px] flex-1 items-center justify-between rounded-[8px] bg-[#f4f8fd] px-4">
