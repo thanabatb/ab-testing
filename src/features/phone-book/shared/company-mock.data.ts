@@ -1,3 +1,5 @@
+import { createCompanyLogoSvg } from "./mock-image.data";
+
 export type CompanyMock = {
   id: string;
   name: string;
@@ -8,21 +10,21 @@ export const phoneBookCompanies: CompanyMock[] = [
   {
     id: "company-1",
     name: "Teddy bank",
-    logoSrc: "https://www.figma.com/api/mcp/asset/6a234e15-9b0b-4199-b429-72e8dfbb9e16"
+    logoSrc: createCompanyLogoSvg("TB", { bg: "#F3A7AD", accent: "#FFFFFF", text: "#7A0F1B" })
   },
   {
     id: "company-2",
     name: "CTK",
-    logoSrc: "https://www.figma.com/api/mcp/asset/026a245c-e677-4a06-bc5c-c4cb81c63b04"
+    logoSrc: createCompanyLogoSvg("CK", { bg: "#1F76D5", accent: "#7CE3F8", text: "#FFFFFF" })
   },
   {
     id: "company-3",
     name: "Infinity",
-    logoSrc: "https://www.figma.com/api/mcp/asset/ccfe28e4-c0f5-4878-b58d-ad41d7d4d184"
+    logoSrc: createCompanyLogoSvg("IN", { bg: "#27324A", accent: "#F8C14C", text: "#F7FAFC" })
   },
   {
     id: "company-4",
     name: "Arai",
-    logoSrc: "https://www.figma.com/api/mcp/asset/1056fc7d-803a-4bf0-84cd-88e20901863b"
+    logoSrc: createCompanyLogoSvg("AR", { bg: "#E8EEF9", accent: "#1F76D5", text: "#1E3561" })
   }
 ];

@@ -15,9 +15,8 @@ import type { ComponentType } from "react";
 
 import { cn } from "@/lib/utils";
 
+import { contactAvatarSrc } from "../../phone-book/shared/mock-image.data";
 import type { CompanyCard, VersionBContact } from "../data/phone-book-version-b.data";
-
-const imgVectorAvatar = "https://www.figma.com/api/mcp/asset/572f164f-3003-411d-b646-af9a8a369e8f";
 
 type NavItem = {
   key: string;
@@ -44,7 +43,7 @@ function AvatarBubble() {
   return (
     <div className="relative size-[60px] shrink-0 rounded-full bg-[#1f76d5]">
       <div className="absolute inset-0 grid place-items-center">
-        <img src={imgVectorAvatar} alt="" className="size-[30px]" width={30} height={30} />
+        <img src={contactAvatarSrc} alt="" className="size-[30px]" width={30} height={30} />
       </div>
     </div>
   );
